@@ -24,13 +24,14 @@ function onPlayerReady(event) {
 }
 
 function onPlayerStateChange(event) {
+    // player state 一覧
     //YT.PlayerState.ENDED
     //YT.PlayerState.PLAYING
     //YT.PlayerState.PAUSED
     //YT.PlayerState.BUFFERING
     //YT.PlayerState.CUED
+    
     if(event.data == YT.PlayerState.ENDED){
-        //event.target.playVideo();
         var button = document.getElementById('button');
         button.disabled=false;
         button.innerHTML = "クリックできるよ"
